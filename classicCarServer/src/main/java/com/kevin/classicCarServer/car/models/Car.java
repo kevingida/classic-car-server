@@ -8,7 +8,6 @@ import lombok.Setter;
 
 @Setter
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class Car {
@@ -27,4 +26,9 @@ public class Car {
     @Column(columnDefinition = "text")
     private String detail;
     private boolean sold = false;
+
+    public Car() {
+    }
+
+
 }
