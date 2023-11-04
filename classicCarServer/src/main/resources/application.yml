@@ -12,9 +12,11 @@ spring:
     init:
       platform: postgresql
       mode: never
-    output:
-      ansi:
-        enabled: always
+  output:
+    ansi:
+      enabled: always
+  config:
+    import: optional:secret.yml
 logging:
   level:
     org:
