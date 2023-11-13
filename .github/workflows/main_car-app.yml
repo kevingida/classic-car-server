@@ -26,10 +26,10 @@ jobs:
         run: mvn clean install
 
       - name: Upload artifact for deployment job
-        uses: classicCarServer/actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: './classicCarServer/${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -41,7 +41,7 @@ jobs:
     
     steps:
       - name: Download artifact from build job
-        uses: classicCarServer/actions/download-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: java-app
       
