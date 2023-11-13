@@ -41,6 +41,7 @@ jobs:
     
     steps:
       - name: Download artifact from build job
+        working-directory: ./classicCarServer
         uses: actions/download-artifact@v3
         with:
           name: java-app
