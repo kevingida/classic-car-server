@@ -1,6 +1,6 @@
 package com.kevin.classicCarServer.car.controllers;
 
-import com.kevin.classicCarServer.car.services.CarService;
+//import com.kevin.classicCarServer.car.services.CarService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/cars")
 public class CarController {
 
-    private final CarService service;
-
-    public CarController(CarService service) {
-        this.service = service;
-    }
+//    private final CarService service;
+//
+//    public CarController(CarService service) {
+//        this.service = service;
+//    }
 
     @GetMapping
     public ResponseEntity<String> getAllCars() {
