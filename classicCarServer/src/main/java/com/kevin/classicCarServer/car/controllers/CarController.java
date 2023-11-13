@@ -18,6 +18,6 @@ public class CarController {
 
     @GetMapping
     public ResponseEntity<String> getAllCars() {
-        return ResponseEntity.ok("good");
+        return ResponseEntity.ok("better");
     }
 }
