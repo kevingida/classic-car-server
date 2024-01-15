@@ -1,17 +1,14 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/classiccardb
-    username: salt
-    password: secret
+    url: ${DB.URL}
+    username: ${DB.USERNAME}
+    password: ${DB.PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     defer-datasource-initialization: true
     hibernate:
       ddl-auto: update
     show-sql: true
-  sql:
-    init:
-      platform: postgresql
-      mode: never
   output:
     ansi:
       enabled: always
