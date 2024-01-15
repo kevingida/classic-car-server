@@ -5,14 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.UuidGenerator;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Setter
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @UuidGenerator
     private String id;
     private String manufacturer;
     private String model;
@@ -26,9 +31,10 @@ public class Car {
     @Column(columnDefinition = "text")
     private String detail;
     private boolean sold = false;
-
-    public Car() {
-    }
-
+    @OneToMany(mappedBy = "car",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            fetch = FetchType.EAGER)
+    private List<Image> imageList = new ArrayList<>();
 
 }
