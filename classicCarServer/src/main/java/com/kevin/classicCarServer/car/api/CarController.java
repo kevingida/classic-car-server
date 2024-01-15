@@ -1,6 +1,6 @@
-package com.kevin.classicCarServer.car;
+package com.kevin.classicCarServer.car.api;
 
-import com.kevin.classicCarServer.car.CarService;
+import com.kevin.classicCarServer.car.service.CarService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
