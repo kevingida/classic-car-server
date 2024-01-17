@@ -32,17 +32,13 @@ public class DatabaseSeeder implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         DBSeeder();
-        CarDataSeeder();
+        carSeeder();
     }
 
     private void DBSeeder() {
         BodyTypeSeeder();
         TransmissionSeeder();
         ManufacturerSeeder();
-    }
-
-    private void CarDataSeeder() {
-        carSeeder();
     }
 
     private void BodyTypeSeeder() {
