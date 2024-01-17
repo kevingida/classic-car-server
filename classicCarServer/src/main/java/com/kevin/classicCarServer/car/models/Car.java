@@ -19,18 +19,27 @@ public class Car {
     @Id
     @UuidGenerator
     private String id;
-    private String manufacturer;
     private String model;
     private Long year;
-    private String bodyStyle;
     private Double km;
-    private String transmission;
-    private String origin;
     private Integer horsepower;
     private Double price;
-    @Column(columnDefinition = "text")
-    private String detail;
     private boolean sold = false;
+
+    @ManyToOne
+    @JoinColumn(name = "manufacturer_id", updatable = false,nullable = false)
+    private Manufacturer manufacturer;
+
+    @ManyToOne
+    @JoinColumn(name = "bodyType_id", updatable = false,nullable = false)
+    private BodyType bodyType;
+    @ManyToOne
+    @JoinColumn(name = "transmission_id", updatable = false,nullable = false)
+    private Transmission transmission;
+
+    @OneToOne(mappedBy = "car")
+    private CarDetail detail;
+
     @OneToMany(mappedBy = "car",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
