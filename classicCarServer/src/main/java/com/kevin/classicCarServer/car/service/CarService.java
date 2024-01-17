@@ -28,4 +28,5 @@ public class CarService {
                 .map(CarMapper::toCarResponse)
                 .orElseThrow(() -> new NoSuchElementException("Toy not found"));
     }
+
 }
