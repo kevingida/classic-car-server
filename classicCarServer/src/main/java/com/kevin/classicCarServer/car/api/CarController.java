@@ -19,13 +19,13 @@ public class CarController {
         this.service = service;
     }
 
-    @GetMapping
-    public CarListResponse getAllCars() {
-        return service.getAllCars();
-    }
+//    @GetMapping
+//    public CarListResponse getAllCars() {
+//        return service.getAllCars();
+//    }
 
-    @GetMapping("/{carId}")
-    public CarResponse getCarById(@PathVariable String carId) {
-        return service.getCarById(carId);
-    }
+//    @GetMapping("/{carId}")
+//    public CarResponse getCarById(@PathVariable String carId) {
+//        return service.getCarById(carId);
+//    }
 }

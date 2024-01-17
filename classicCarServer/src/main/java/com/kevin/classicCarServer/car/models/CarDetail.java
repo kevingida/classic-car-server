@@ -17,22 +17,22 @@ public class CarDetail {
     @UuidGenerator
     private String id;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "car_id", referencedColumnName = "id")
     private Car car;
 
-    @Column(length = 1000)
+    @Column(columnDefinition = "text")
     private String overview;
 
-    @Column(length = 1000)
+    @Column(columnDefinition = "text")
     private String exterior;
 
-    @Column(length = 1000)
+    @Column(columnDefinition = "text")
     private String interior;
 
-    @Column(length = 1000)
+    @Column(columnDefinition = "text")
     private String engine;
 
-    @Column(length = 1000)
+    @Column(columnDefinition = "text")
     private String history;
 }

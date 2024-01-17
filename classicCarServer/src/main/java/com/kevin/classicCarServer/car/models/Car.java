@@ -20,10 +20,10 @@ public class Car {
     @UuidGenerator
     private String id;
     private String model;
-    private Long year;
-    private Double km;
+    private Integer year;
+    private Integer km;
     private Integer horsepower;
-    private Double price;
+    private Integer price;
     private boolean sold = false;
 
     @ManyToOne

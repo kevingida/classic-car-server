@@ -19,14 +19,14 @@ public class CarService {
         this.carRepo = repo;
     }
 
-    public CarListResponse getAllCars() {
-        return CarMapper.toCarListResponse(carRepo.findAll()) ;
-    }
+//    public CarListResponse getAllCars() {
+//        return CarMapper.toCarListResponse(carRepo.findAll()) ;
+//    }
 
-    public CarResponse getCarById(String id) {
-        return carRepo.findById(id)
-                .map(CarMapper::toCarResponse)
-                .orElseThrow(() -> new NoSuchElementException("Toy not found"));
-    }
+//    public CarResponse getCarById(String id) {
+//        return carRepo.findById(id)
+//                .map(CarMapper::toCarResponse)
+//                .orElseThrow(() -> new NoSuchElementException("Toy not found"));
+//    }
 
 }
